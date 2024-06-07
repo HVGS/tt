@@ -25,7 +25,7 @@
         header a {
             color: #FFFFFF;
             text-decoration: none;
-            margin-left: 8%;
+            margin-left: 6%;
             margin-right: 8%;
             font-weight: bold;
             transition: 0.5s;
@@ -35,21 +35,12 @@
             transform: scale(1.1);
         }
 
-        #day-week-display {
-            position: absolute;
-            top: 10px;
-            right: 45%;
-            font-size: 16px;
-            font-weight: bold;
-            color: #FFF;
-        }
-
         #timetable {
             width: 500px;
             height: calc(100% - 100px); /* Adjusted height for the header */
             overflow-y: auto;
-            margin-top: 2%;
-            margin-left: 33%;
+            margin-top: 12%;
+            margin-left: -15%;
             position: relative;
         }
 
@@ -57,11 +48,12 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 10px;
+            margin-bottom: -2px;
             border-radius: 8px;
             overflow: hidden;
             width: 100%;
             position: relative;
+            transform: scale(0.75);
         }
 
         .time, .activity, .room, .break {
@@ -70,7 +62,7 @@
             border-radius: 8px;
             text-align: center;
             font-weight: bolder;
-            margin-left: 2%;
+            margin-left: 1%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -101,22 +93,21 @@
             background-color: #242424;
             position: absolute;
             top: 0;
-            left: 70px; /* Adjusted left position */
-            width: calc(100% - 63px); /* Adjusted width */
+            left: 65px; /* Adjusted left position */
+            width: 600px; /* Adjusted width */
         }
 
         .break .break-text {
-            margin-right: 20%; /* Move the break text closer to the left */
+            margin-right: 40%; /* Move the break text closer to the left */
         }
     </style>
 </head>
 <body>
     <header>
-        <a href="harry.html" style="color: lightblue;">Harry</a>
-        <a href="will.html">Will</a>
+        <a href="harry.html">Harry</a>
+        <a href="will.html" style="color: lightblue;">Will</a>
         <a href="jake.html">Jake</a>
         <a href="madi.html">Madi</a>
-        <div id="day-week-display"></div>
     </header>
 
     <div id="timetable"></div>
@@ -147,11 +138,7 @@
             const week = getWeek(today);
             const dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][today.getDay()];
 
-            // Display the current day and week
-            const dayWeekDisplay = document.getElementById('day-week-display');
-            dayWeekDisplay.textContent = `${dayOfWeek}, ${week}`;
-
-            fetch('harry.yaml')
+            fetch('will.yaml')
                 .then(response => response.text())
                 .then(data => {
                     const timetable = jsyaml.load(data);
@@ -210,16 +197,8 @@
                 })
                 .catch(error => console.log('Error fetching timetable:', error));
         }
-        function isMobileDevice() {
-            return /Mobi|Android/i.test(navigator.userAgent);
-        }
 
-        // Redirect mobile users to a different page
-        if (isMobileDevice()) {
-            window.location.href = 'harry-m.html'; // Replace with your mobile page
-        } else {
         getTimetable();
-        }
     </script>
 </body>
 </html>
