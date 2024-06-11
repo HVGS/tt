@@ -1,0 +1,332 @@
+Week A:
+  Monday:
+    Period-0:
+      Class: "Mentor Group"
+      Room: "VCR"
+      Time: "8:30 8:49"
+    Period-1:
+      Class: "English 2"
+      Room: "C10"
+      Time: "8:50 9:39"
+    Period-2:
+      Class: "Maths 1"
+      Room: "A7"
+      Time: "9:40 10:29"
+    Recess:
+      Time: "10:30 10:49"
+    Period-3:
+      Class: "French 1"
+      Room: "V3"
+      Time: "10:50 11:39"
+    Period-4:
+      Class: "Health 5"
+      Room: "A5"
+      Time: "11:40 12:29"
+    Lunch:
+      Time: "12:30 1:19"
+    Period-5:
+      Class: "IDU 5"
+      Room: "A6"
+      Time: "1:20 2:09"
+    Period-6:
+      Class: "Technology 4 "
+      Room: "T6"
+      Time: "2:10 2:55"
+  Tuesday:
+    Period-0:
+      Class: "Mentor Group"
+      Room: "VCR"
+      Time: "8:30 8:49"
+    Period-1:
+      Class: "Science 2"
+      Room: "E6"
+      Time: "8:50 9:39"
+    Period-2:
+      Class: "Visual Arts 5"
+      Room: "VCR"
+      Time: "9:40 10:29"
+    Recess:
+      Time: "10:30 10:49"
+    Period-3:
+      Class: "Geography 5"
+      Room: "D10"
+      Time: "10:50 11:39"
+    Period-4:
+      Class: "Mentor Group"
+      Room: "VCR"
+      Time: "11:40 12:29"
+    Lunch:
+      Time: "12:30 1:19"
+    Period-5:
+      Class: "English 2"
+      Room: "C10"
+      Time: "1:20 2:09"
+    Period-6:
+      Class: "Maths 1 "
+      Room: "B2"
+      Time: "2:10 2:55"
+  Wednesday:
+    Period-0:
+      Class: "Mentor Group"
+      Room: "VCR"
+      Time: "8:30 8:49"
+    Period-1:
+      Class: "Science 2"
+      Room: "E6"
+      Time: "8:50 9:39"
+    Period-2:
+      Class: "Visual Arts 5"
+      Room: "VCR"
+      Time: "9:40 10:29"
+    Recess:
+      Time: "10:30 10:49"
+    Period-3:
+      Class: "Sport 5"
+      Room: "CC"
+      Time: "10:50 11:39"
+    Period-4:
+      Class: "French 1"
+      Room: "V3"
+      Time: "11:40 12:29"
+    Lunch:
+      Time: "12:30 1:19"
+    Period-5:
+      Class: "English 2"
+      Room: "C10"
+      Time: "1:20 2:09"
+    Period-6:
+      Class: "Technology 4"
+      Room: "T6"
+      Time: "2:10 2:55"
+  Thursday:
+    Period-0:
+      Class: "Mentor Group"
+      Room: "VCR"
+      Time: "8:30 8:49"
+    Period-1:
+      Class: "Science 2"
+      Room: "E6"
+      Time: "8:50 9:39"
+    Period-2:
+      Class: "French 1"
+      Room: "V3"
+      Time: "9:40 10:29"
+    Recess:
+      Time: "10:30 10:49"
+    Period-3:
+      Class: "Sport 5"
+      Room: "CC"
+      Time: "10:50 11:39"
+    Period-4:
+      Class: "Sport 5"
+      Room: "CC"
+      Time: "11:40 12:29"
+    Lunch:
+      Time: "12:30 1:19"
+    Period-5:
+      Class: "Geography 5"
+      Room: "D10			"
+      Time: "1:20 2:09"
+    Period-6:
+      Class: "Technology 4"
+      Room: "T6"
+      Time: "2:10 2:55"
+  Friday:
+    Period-0:
+      Class: "Mentor Group"
+      Room: "VCR"
+      Time: "8:30 8:49"
+    Period-1:
+      Class: "Science 2"
+      Room: "E6"
+      Time: "8:50 9:39"
+    Period-2:
+      Class: "Science 2"
+      Room: "E6"
+      Time: "9:40 10:29"
+    Recess:
+      Time: "10:30 10:49"
+    Period-3:
+      Class: "Visual Arts 5"
+      Room: "VCR"
+      Time: "10:50 11:39"
+    Period-4:
+      Class: "French 1"
+      Room: "V3"
+      Time: "11:40 12:29"
+    Lunch:
+      Time: "12:30 1:19"
+    Period-5:
+      Class: "Geography 5"
+      Room: "D10"
+      Time: "1:20 2:09"
+    Period-6:
+      Class: "Maths 1"
+      Room: "B2"
+      Time: "2:10 2:55"
+Week B:
+  Monday:
+    Period-0:
+      Class: "Mentor Group"
+      Room: "VCR"
+      Time: "8:30 8:49"
+    Period-1:
+      Class: "French 1"
+      Room: "V3"
+      Time: "8:50 9:39"
+    Period-2:
+      Class: "Geography 5"
+      Room: "D10"
+      Time: "9:40 10:29"
+    Recess:
+      Time: "10:30 10:49"
+    Period-3:
+      Class: "Technology 4"
+      Room: "T6"
+      Time: "10:50 11:39"
+    Period-4:
+      Class: "Maths 1"
+      Room: "B2"
+      Time: "11:40 12:29"
+    Lunch:
+      Time: "12:30 1:19"
+    Period-5:
+      Class: "Science 2"
+      Room: "E6"
+      Time: "1:20 2:09"
+    Period-6:
+      Class: "Health"
+      Room: "D8"
+      Time: "2:10 2:55"
+  Tuesday:
+    Period-0:
+      Class: "Mentor Group"
+      Room: "VCR"
+      Time: "8:30 8:49"
+    Period-1:
+      Class: "Technology 4"
+      Room: "T6"
+      Time: "8:50 9:39"
+    Period-2:
+      Class: "Maths 1"
+      Room: "B2"
+      Time: "9:40 10:29"
+    Recess:
+      Time: "10:30 10:49"
+    Period-3:
+      Class: "English 2"
+      Room: "C10"
+      Time: "10:50 11:39"
+    Period-4:
+      Class: "Mentor Group"
+      Room: "VCR"
+      Time: "11:40 12:29"
+    Lunch:
+      Time: "12:30 1:19"
+    Period-5:
+      Class: "Visual Art 5"
+      Room: "VCR"
+      Time: "1:20 2:09"
+    Period-6:
+      Class: "Geography 5"
+      Room: "D10"
+      Time: "2:10 2:55"
+  Wednesday:
+    Period-0:
+      Class: "Mentor Group"
+      Room: "VCR"
+      Time: "8:30 8:49"
+    Period-1:
+      Class: "Visual Art 5"
+      Room: "VCR"
+      Time: "8:50 9:39"
+    Period-2:
+      Class: "Visual Art 5"
+      Room: "VCR"
+      Time: "9:40 10:29"
+    Recess:
+      Time: "10:30 10:49"
+    Period-3:
+      Class: "Sport 5"
+      Room: "CC"
+      Time: "10:50 11:39"
+    Period-4:
+      Class: "Maths 1"
+      Room: "B2"
+      Time: "11:40 12:29"
+    Lunch:
+      Time: "12:30 1:19"
+    Period-5:
+      Class: "French 1"
+      Room: "V3"
+      Time: "1:20 2:09"
+    Period-6:
+      Class: "English 2"
+      Room: "C10"
+      Time: "2:10 2:55"
+  Thursday:
+    Period-0:
+      Class: "Mentor Group"
+      Room: "VCR"
+      Time: "8:30 8:49"
+    Period-1:
+      Class: "French 1"
+      Room: "V3"
+      Time: "8:50 9:39"
+    Period-2:
+      Class: "Visual Arts 5"
+      Room: "VCR"
+      Time: "9:40 10:29"
+    Recess:
+      Time: "10:30 10:49"
+    Period-3:
+      Class: "English 2"
+      Room: "C10"
+      Time: "10:50 11:39"
+    Period-4:
+      Class: "English 2"
+      Room: "C10"
+      Time: "11:40 12:29"
+    Lunch:
+      Time: "12:30 1:19"
+    Period-5:
+      Class: "Technology 4"
+      Room: "T6"
+      Time: "1:20 2:09"
+    Period-6:
+      Class: "Technology 4"
+      Room: "T6"
+      Time: "2:10 2:55"
+  Friday:
+    Period-0:
+      Class: "Mentor Group"
+      Room: "VCR"
+      Time: "8:30 8:49"
+    Period-1:
+      Class: "IDU 5"
+      Room: "A7"
+      Time: "8:50 9:39"
+    Period-2:
+      Class: "Sport 5"
+      Room: "CC"
+      Time: "9:40 10:29"
+    Recess:
+      Time: "10:30 10:49"
+    Period-3:
+      Class: "Geography 5"
+      Room: "D10"
+      Time: "10:50 11:39"
+    Period-4:
+      Class: "Geography 5"
+      Room: "D10"
+      Time: "11:40 12:29"
+    Lunch:
+      Time: "12:30 1:19"
+    Period-5:
+      Class: "Science 2"
+      Room: "E6"
+      Time: "1:20 2:09"
+    Period-6:
+      Class: "Maths 1"
+      Room: "B2"
+      Time: "2:10 2:55"

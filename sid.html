@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        header {
+            background-color: #242424;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin-left: 8%;
+            margin-right: 8%;
+            font-weight: bold;
+            transition: 0.5s;
+        }
+
+        header a:hover {
+            transform: scale(1.1);
+        }
+
+        #day-week-display {
+            position: absolute;
+            top: 10px;
+            right: 45%;
+            font-size: 16px;
+            font-weight: bold;
+            color: #FFF;
+        }
+
+        #timetable {
+            width: 500px;
+            height: calc(100% - 100px); /* Adjusted height for the header */
+            overflow-y: auto;
+            margin-top: 2%;
+            margin-left: 33%;
+            position: relative;
+        }
+
+        .timetable-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .time, .activity, .room, .break {
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bolder;
+            margin-left: 2%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .time {
+            width: 60px;
+            height: 60px;
+            background-color: #1C1C1C;
+            border-right: 2px solid #1C1C1C;
+        }
+
+        .activity, .break {
+            flex-grow: 1;
+            background-color: #242424;
+            height: 60px;
+        }
+
+        .room {
+            width: 60px;
+            height: 60px;
+            background-color: #1C1C1C;
+            border-left: 2px solid #1C1C1C;
+        }
+
+        .break {
+            border-radius: 8px 0 0 8px;
+            background-color: #242424;
+            position: absolute;
+            top: 0;
+            left: 70px; /* Adjusted left position */
+            width: calc(100% - 63px); /* Adjusted width */
+        }
+
+        .break .break-text {
+            margin-right: 20%; /* Move the break text closer to the left */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="day-week-display"></div>
+    </header>
+
+    <div id="timetable"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script>
+        // Function to determine the current week
+        function getWeek(date) {
+            const weekNumber = (date.getWeekNumber() % 2 === 0) ? "B" : "A";
+            return `Week ${weekNumber}`;
+        }
+
+        // Function to get the week number
+        Date.prototype.getWeekNumber = function () {
+            const firstJan = new Date(this.getFullYear(), 0, 1);
+            return Math.ceil((((this - firstJan) / 86400000) + firstJan.getDay() + 1) / 7);
+        };
+
+        // Function to get the timetable for the current day
+        function getTimetable() {
+            const today = new Date();
+
+            // Check if it's past 3 PM or the weekend, and adjust the date accordingly
+            if (today.getHours() >= 15 || today.getDay() === 0 || today.getDay() === 6) {
+                today.setDate(today.getDate() + 1);
+            }
+
+            const week = getWeek(today);
+            const dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][today.getDay()];
+
+            // Display the current day and week
+            const dayWeekDisplay = document.getElementById('day-week-display');
+            dayWeekDisplay.textContent = `${dayOfWeek}, ${week}`;
+
+            fetch('sid.yaml')
+                .then(response => response.text())
+                .then(data => {
+                    const timetable = jsyaml.load(data);
+                    const dayTimetable = timetable[week][dayOfWeek];
+
+                    const timetableContainer = document.getElementById('timetable');
+                    timetableContainer.innerHTML = '';
+
+                    for (const period in dayTimetable) {
+                        const { Class, Room, Time } = dayTimetable[period];
+
+                        if (period === 'Lunch' || period === 'Recess') {
+                            const item = document.createElement('div');
+                            item.classList.add('timetable-item');
+
+                            const timeDiv = document.createElement('div');
+                            timeDiv.classList.add('time');
+                            timeDiv.textContent = Time;
+
+                            const activityDiv = document.createElement('div');
+                            activityDiv.classList.add('break'); // Use .break class for Lunch/Recess
+                            activityDiv.innerHTML = `<span class="break-text">${period}</span>`; // Use the period name (Lunch/Recess) as the activity
+
+                            const roomDiv = document.createElement('div');
+                            roomDiv.classList.add('room');
+                            roomDiv.textContent = ''; // No need to display room for Lunch/Recess
+
+                            item.appendChild(timeDiv);
+                            item.appendChild(activityDiv);
+                            item.appendChild(roomDiv);
+
+                            timetableContainer.appendChild(item);
+                        } else {
+                            const item = document.createElement('div');
+                            item.classList.add('timetable-item');
+
+                            const timeDiv = document.createElement('div');
+                            timeDiv.classList.add('time');
+                            timeDiv.textContent = Time;
+
+                            const activityDiv = document.createElement('div');
+                            activityDiv.classList.add('activity');
+                            activityDiv.textContent = Class;
+
+                            const roomDiv = document.createElement('div');
+                            roomDiv.classList.add('room');
+                            roomDiv.textContent = Room;
+
+                            item.appendChild(timeDiv);
+                            item.appendChild(activityDiv);
+                            item.appendChild(roomDiv);
+
+                            timetableContainer.appendChild(item);
+                        }
+                    }
+                })
+                .catch(error => console.log('Error fetching timetable:', error));
+        }
+        function isMobileDevice() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
+
+        // Redirect mobile users to a different page
+        if (isMobileDevice()) {
+            window.location.href = 'harry-m.html'; // Replace with your mobile page
+        } else {
+        getTimetable();
+        }
+    </script>
+</body>
+</html>
