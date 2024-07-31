@@ -26,7 +26,7 @@ Week A:
       Time: "12:30 1:19"
     Period-5:
       Class: "Interdisciplinary 2"
-      Room: "E2"
+      Room: "LSS"
       Time: "1:20 2:09"
     Period-6:
       Class: "Art 2"
@@ -35,7 +35,7 @@ Week A:
   Tuesday:
     Period-0:
       Class: "Mentor Group"
-      Room: "VCR"
+      Room: "LT"
       Time: "8:30 8:49"
     Period-1:
       Class: "Science 1"
@@ -43,7 +43,7 @@ Week A:
       Time: "8:50 9:39"
     Period-2:
       Class: "Technology 1"
-      Room: "T6"
+      Room: "T3"
       Time: "9:40 10:29"
     Recess:
       Time: "10:30 10:49"
@@ -82,7 +82,7 @@ Week A:
       Time: "10:30 10:49"
     Period-3:
       Class: "Technology 1"
-      Room: "T6"
+      Room: "T8"
       Time: "10:50 11:39"
     Period-4:
       Class: "Mandarian 1"
@@ -182,7 +182,7 @@ Week B:
       Time: "10:30 10:49"
     Period-3:
       Class: "Geography 2"
-      Room: "I2"
+      Room: "D10"
       Time: "10:50 11:39"
     Period-4:
       Class: "Maths 1"
@@ -196,7 +196,7 @@ Week B:
       Time: "1:20 2:09"
     Period-6:
       Class: "Technology 1"
-      Room: "T6"
+      Room: "I2"
       Time: "2:10 2:55"
   Tuesday:
     Period-0:
@@ -225,11 +225,11 @@ Week B:
       Time: "12:30 1:19"
     Period-5:
       Class: "Technology 1"
-      Room: "T6"
+      Room: "T3"
       Time: "1:20 2:09"
     Period-6:
       Class: "Technology 1"
-      Room: "T6"
+      Room: "T3"
       Time: "2:10 2:55"
   Wednesday:
     Period-0:
@@ -237,12 +237,12 @@ Week B:
       Room: "VCR"
       Time: "8:30 8:49"
     Period-1:
-      Class: "Geography 2"
-      Room: "I2"
+      Class: "Art 2"
+      Room: "VCR"
       Time: "8:50 9:39"
     Period-2:
-      Class: "Geography 2"
-      Room: "I2"
+      Class: "Art 2"
+      Room: "VCR"
       Time: "9:40 10:29"
     Recess:
       Time: "10:30 10:49"
@@ -275,7 +275,7 @@ Week B:
       Time: "8:50 9:39"
     Period-2:
       Class: "Technology 1"
-      Room: "T6"
+      Room: "T8"
       Time: "9:40 10:29"
     Recess:
       Time: "10:30 10:49"
@@ -304,7 +304,7 @@ Week B:
       Time: "8:30 8:49"
     Period-1:
       Class: "Interdisciplinary 2"
-      Room: "E2"
+      Room: "LSS"
       Time: "8:50 9:39"
     Period-2:
       Class: "Art 2"
@@ -314,7 +314,7 @@ Week B:
       Time: "10:30 10:49"
     Period-3:
       Class: "Technology 1"
-      Room: "I2"
+      Room: "D10"
       Time: "10:50 11:39"
     Period-4:
       Class: "PDHPE 2"
