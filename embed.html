@@ -111,6 +111,13 @@
     </style>
 </head>
 <body>
+    <header>
+        <a href="harry.html" style="color: lightblue;">Harry</a>
+        <a href="will.html">Will</a>
+        <a href="jake.html">Jake</a>
+        <a href="madi.html">Madi</a>
+        <div id="day-week-display"></div>
+    </header>
 
     <div id="timetable"></div>
 
@@ -202,6 +209,16 @@
                     }
                 })
                 .catch(error => console.log('Error fetching timetable:', error));
+        }
+        function isMobileDevice() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
+
+        // Redirect mobile users to a different page
+        if (isMobileDevice()) {
+            window.location.href = 'harry-m.html'; // Replace with your mobile page
+        } else {
+        getTimetable();
         }
     </script>
 </body>
